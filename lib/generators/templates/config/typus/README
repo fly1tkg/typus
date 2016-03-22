@@ -20,6 +20,7 @@ Use this example as reference to customize your YAML files.
             body: rich_text
       actions:
         index: cleanup
+        list: examine
         edit: send_as_newsletter
         show: rebuild
       order_by: created_at

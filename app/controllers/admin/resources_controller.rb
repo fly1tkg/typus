@@ -25,6 +25,9 @@ class Admin::ResourcesController < Admin::BaseController
       format.html do
         set_default_action
         add_resource_action('typus.buttons.destroy', {action: 'destroy'}, {glyphicon: 'remove'})
+        custom_actions_for(:list).each do |action|
+          prepend_resource_action(action.titleize, {action: action})
+        end
         get_paginated_data
       end
 
